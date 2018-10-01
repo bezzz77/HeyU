@@ -1,0 +1,42 @@
+.header
+  background-color: transparent
+  padding: 20px 0
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 99
+  animation: fade-down 1s .1s 1 ease-in-out
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__nav
+    display: flex
+    li
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+    &-link
+      color: #fff
+      font-size: 18px
+      text-transform: uppercase
+      text-decoration: none
+      position: relative
+      transition: .2s ease-in-out
+      &:after, &:before
+        content: ''
+        position: absolute
+        width: 0
+        height: 1px
+        background-color: #fff
+        transition: .2s ease-in-out
+      &:after
+        top: -4px
+        left: 0
+      &:before
+        right: 0
+        bottom: -4px
+      &:hover
+        &:after, &:before
+          width: 100%
